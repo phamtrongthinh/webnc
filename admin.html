@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>Hệ thống quản lý</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Hồ sơ</a></li>
+                <li><a href="#">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar and Main Content -->
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Bảng điều khiển</a></li>
+                <li><a href="#">Quản lý giáo viên</a></li>
+                <li><a href="#">Quản lý học sinh</a></li>
+                <li><a href="#">Quản lý lớp học</a></li>
+                <li><a href="#">Quản lý bài tập</a></li>
+                <li><a href="#">Báo cáo</a></li>
+                <li><a href="#">Cài đặt hệ thống</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="main-content">
+            <div class="welcome-message">
+                <h2>Chào mừng, Quản trị viên!</h2>
+                <p>Quản lý và giám sát toàn bộ hệ thống lớp học trực tuyến từ đây.</p>
+            </div>
+
+            <div class="content-section">
+                <h3>Quản lý giáo viên</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tên giáo viên</th>
+                            <th>Email</th>
+                            <th>Số lượng lớp học</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nguyễn Văn A</td>
+                            <td>a.nguyen@school.edu.vn</td>
+                            <td>5</td>
+                            <td><button class="btn">Chỉnh sửa</button> <button class="btn">Xóa</button></td>
+                        </tr>
+                        <tr>
+                            <td>Trần Thị B</td>
+                            <td>b.tran@school.edu.vn</td>
+                            <td>3</td>
+                            <td><button class="btn">Chỉnh sửa</button> <button class="btn">Xóa</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-section">
+                <h3>Quản lý học sinh</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tên học sinh</th>
+                            <th>Email</th>
+                            <th>Lớp học</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lê Văn C</td>
+                            <td>c.le@student.edu.vn</td>
+                            <td>Toán</td>
+                            <td><button class="btn">Chỉnh sửa</button> <button class="btn">Xóa</button></td>
+                        </tr>
+                        <tr>
+                            <td>Phạm Thị D</td>
+                            <td>d.pham@student.edu.vn</td>
+                            <td>Văn</td>
+                            <td><button class="btn">Chỉnh sửa</button> <button class="btn">Xóa</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-section">
+                <h3>Thống kê</h3>
+                <ul class="stats-list">
+                    <li>Tổng số giáo viên: 10</li>
+                    <li>Tổng số học sinh: 200</li>
+                    <li>Tổng số lớp học: 15</li>
+                    <li>Tổng số bài tập: 50</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
