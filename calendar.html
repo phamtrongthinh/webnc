@@ -1,0 +1,118 @@
+@{
+    ViewData["Title"] = "Lịch học";
+}
+<div class="container">
+    <div class="sidebar" style="background-color: #dedede;">
+        <ul>
+            <li><a href="~/Home/Index"> Trang chủ</a></li>
+            <li><a href="~/Calendar/Index"> Lịch học của tôi</a></li>
+            <li><a href="~/KhoaHoc/Index"> Khóa học của tôi</a></li>
+            <li><a href="#"> Tạo khóa học</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header-content">
+                <h1>Lịch học </h1>
+        </div>
+        <div id="calendar"></div>
+    </div>
+</div>
+
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+    }
+ body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        margin-left: 0%;
+        margin-right: 0%;
+        display: flex;
+        height: 100vh;
+        width: 500vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: white;
+        padding: 20px;
+        border-right: 1px solid #ccc;
+        border-radius: 15px; /* Bo góc sidebar */
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .sidebar ul li {
+        font-weight: 500;
+        margin-bottom: 25px;
+        margin-left: 20px;
+    }
+
+    .sidebar ul li a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+
+    .sidebar ul li a:hover {
+        background-color: #f0f0f0;
+        padding-left: 10px;
+        transition: padding-left 0.3s ease;
+    }
+    .main-content {
+        width: 100%;
+        flex-grow: 1; /* Main content sẽ chiếm không gian còn lại */
+        background-color: #ffffff;
+        padding-left: 30px ;
+    }
+     .main-content h1 {
+        text-align: left; /* Căn tiêu đề "Khóa học của tôi" sang bên trái */
+        font-size: 24px;
+        /*margin-bottom: 20px;*/
+        font-weight: 700;
+        padding-left: 10px;
+        padding-top: 20px;
+    }
+<!-- FullCalendar CSS -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
+
+<!-- FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            events: [
+                {
+                    title: 'Sự kiện 1',
+                    start: '2024-10-22'
+                },
+                {
+                    title: 'Sự kiện 2',
+                    start: '2024-10-25'
+                }
+            ]
+        });
+
+        calendar.render();
+    });
+</script>
