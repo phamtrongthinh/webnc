@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - Đổi mật khẩu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            border: 1px solid #e0e0e0;
+            width: 90%;
+            max-width: 450px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #1e90ff;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+        label {
+            margin-top: 20px;
+            color: #555;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        input[type="password"]:focus {
+            border-color: #1e90ff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(30,144,255,0.5);
+        }
+        input[type="submit"] {
+            margin-top: 30px;
+            padding: 8px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 20px;
+            width: 100%;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #4169e1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(30,144,255,0.3);
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>EduConnect</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="current-password">Mật khẩu hiện tại</label>
+                <input type="password" id="current-password" name="current-password" required>
+            </div>
+            <div class="form-group">
+                <label for="new-password">Mật khẩu mới</label>
+                <input type="password" id="new-password" name="new-password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Xác nhận mật khẩu mới</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div>
+                <input type="submit" value="Đổi mật khẩu">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
