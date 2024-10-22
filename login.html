@@ -55,7 +55,7 @@
         }
         input[type="submit"] {
             margin-top: 30px;
-            padding: 8px;
+            padding: 10px;
             background-color: #1e90ff;
             color: white;
             border: none;
@@ -98,7 +98,7 @@
 <body>
     <div class="container">
         <h2>EduConnect</h2>
-        <form action="#" method="post">
+        <form  id="loginForm" action="#" method="post">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" required>
@@ -108,15 +108,23 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="forgot_password">
-                <a href="#">Quên mật khẩu?</a>
+                <a href="forgotpass.html">Quên mật khẩu?</a>
             </div>
             <div>
-                <input type="submit" value="Đăng nhập">
+                <input type="submit" value="Đăng nhập" >
             </div>
             <div class="signup-link">
                 <p>Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a></p>
             </div>
         </form>
     </div>
+    <script>
+         document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi gửi form mặc định
+            window.location.href = "home.html"; // Điều hướng sang trang home
+        });
+    
+    </script>
 </body>
+
 </html>
