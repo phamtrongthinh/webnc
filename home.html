@@ -1,154 +1,189 @@
-@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="container">
-    <div class="sidebar" style="background-color: #dedede;">
-        <ul>
-            <li><a href="~/Home/Index"> Trang chủ</a></li>
-            <li><a href="~/Calendar/Index"> Lịch học của tôi</a></li>
-            <li><a href="~/KhoaHoc/Index"> Khóa học của tôi</a></li>
-            <li><a href="#"> Tạo khóa học</a></li>
-        </ul>
-    </div>
-
-    <div class="main-content">
-        <header>
-            <div class="header-content">
-                <h1>Khám phá các khóa học mới </h1>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý khóa học</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="main-header">
+            <h1>EduConnect</h1>
+            <div class="user-controls">
+                <i class="fas fa-user-circle"></i>
             </div>
         </header>
-        <div class="course-list">
-            @foreach (var course in Model)
-            {
-                <div class="course">
-                    <p>@course.CourseName</p>
-                    <p>@course.CourseCode</p>
-                </div>
-            }
-        </div>
-        <div>
-            
+        
+        <div class="content-wrapper">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#"> Trang chủ</a></li>
+                        <li><a href="#"> Lịch</a></li>
+                        <li><a href="#"> Khóa học của tôi</a></li>
+                        <li><a href="#"> Tạo lớp học</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <section class="courses">
+                    <h2>Khám phá khóa học mới</h2>
+                    <div class="courses-grid">
+                        <div class="course-item active">
+                            <div class="course-info">
+                                <p>Tên khóa học</p>
+                                <p>Mã khóa học</p>
+                            </div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-info">
+                                <p>Tên khóa học</p>
+                                <p>Mã khóa học</p>
+                            </div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-info">
+                                <p>Tên khóa học</p>
+                                <p>Mã khóa học</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
     </div>
-</div>
-
-<!-- Style embedded in the view for simplicity -->
+</body>
+</html>
 <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #ffffff;
-    }
- body, html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        margin-left: 0%;
-        display: flex;
-        height: 200vh;
-        width: 600vh;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
 
-    .sidebar {
-        width: 250px;
-        background-color: white;
-        padding: 20px;
-        border-right: 1px solid #ccc;
-        border-radius: 15px; /* Bo góc sidebar */
-    }
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    .sidebar ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
+/* Header */
+.main-header {
+    background-color: #1e90ff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
 
-    .sidebar ul li {
-        font-weight: 500;
-        margin-bottom: 25px;
-        margin-left: 10px;
-    }
+.main-header h1 {
+    font-size: 18px;
+    color: #ffffff;
+}
 
-    .sidebar ul li a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: black;
-        font-size: 16px;
-    }
+.user-controls i {
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 
-    .sidebar ul li a:hover {
-        background-color: #f0f0f0;
-        padding-left: 5px;
-        transition: padding-left 0.3s ease;
-    }
+/* Wrapper for Sidebar and Main Content */
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
 
-    .main-content {
-        width: 100%;
-        flex-grow: 1; /* Main content sẽ chiếm không gian còn lại */
-        padding: 20px;
-        background-color: #ffffff;
-        margin: 0;
-    }
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
 
-    .main-content h1 {
-        text-align: left; /* Căn tiêu đề "Khóa học của tôi" sang bên trái */
-        font-size: 24px;
-        /*margin-bottom: 20px;*/
-        font-weight: 700;
-    }
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        /*margin-bottom: 20px;*/
-    }
 
-    .header-icons a {
-        margin-left: 15px;
-        font-size: 18px;
-        text-decoration: none;
-        color: black;
-    }
+.menu ul {
+    list-style: none;
+}
 
-    .course-list {
-        display: flex;
-        justify-content: space-around; /* Khoảng cách giữa các khóa học */
-        flex-wrap: wrap;
-    }
+.menu ul li {
+    margin-bottom: 20px;
+}
 
-    .course {
-        width: 25%; /* Mở rộng kích thước của course */
-        background-color: #f0f0f0;
-        padding: 20px;
-        text-align: left;
-        color: cornflowerblue;
-        border-radius: 5px;
-        transition: box-shadow 0.3s ease;
-        margin-bottom: 20px; /* Tạo khoảng cách giữa các khóa học */
-        margin-top: 30px;
-    }
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
 
-    .course:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+.menu ul li a i {
+    margin-right: 10px;
+}
 
-    /* Responsive Design */
-    @@media (max-width: 768px) {
-        .course-list {
-            flex-direction: column;
-        }
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+}
 
-        .course {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    }
+.courses {
+    text-align: left;
+}
+
+.courses h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.courses-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.course-item {
+    width: 300px;
+    height: 150px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.course-item:hover {
+    border-color: #333;
+}
+
+.course-info {
+    text-align: center;
+    color: #13a1c1;
+}
+
+.course-info p {
+    margin: 5px 0;
+}
+
+.active {
+    border: 2px solid black;
+}
+
 </style>
