@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\btl_webnc2.props" />
+</Project>
