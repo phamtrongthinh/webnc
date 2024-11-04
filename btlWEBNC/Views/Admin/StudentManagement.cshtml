@@ -1,0 +1,42 @@
+﻿@model IEnumerable<TblUser>
+@{
+    ViewData["Title"] = "Student Management";
+    Layout = "Admin_Layout";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Danh sách học sinh</h2>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="text-center">STT</th>
+                <th scope="col" class="text-center">Name</th>
+                <th scope="col" class="text-center">Email</th>
+                <th scope="col" class="text-center">Password</th>
+                <th scope="col" class="text-center">Role</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int serialNumber = 1; // Biến để đếm số thứ tự
+            }
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td class="align-middle text-center">@serialNumber</td>
+                    <td class="align-middle text-center">@student.Username</td>
+                    <td class="align-middle text-center">@student.Email</td>
+                    <td class="align-middle text-center">@student.Password</td>
+                    <td class="align-middle text-center">@student.Role</td>
+                    <td class="align-middle text-center">
+                        <a asp-action="Edit" asp-route-id="@student.UserId" class="btn btn-sm btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@student.UserId" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                serialNumber++;
+            }
+        </tbody>
+    </table>
+</div>

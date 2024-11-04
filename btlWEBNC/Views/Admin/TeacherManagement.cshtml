@@ -1,0 +1,80 @@
+﻿@model IEnumerable<TblUser>
+@{
+    ViewData["Title"] = "TeacherManagement";
+    Layout = "Admin_Layout";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Danh sách học sinh</h2>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="text-center">STT</th>
+                <th scope="col" class="text-center">Name</th>
+                <th scope="col" class="text-center">Email</th>
+                <th scope="col" class="text-center">Password</th>
+                <th scope="col" class="text-center">Role</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int serialNumber = 1; // Biến để đếm số thứ tự
+            }
+            @foreach (var teacher in Model)
+            {
+                <tr id="row-@teacher.UserId">
+                    <td class="align-middle text-center">@serialNumber</td>
+                    <td class="align-middle text-center">@teacher.Username</td>
+                    <td class="align-middle text-center">@teacher.Email</td>
+                    <td class="align-middle text-center">@teacher.Password</td>
+                    <td class="align-middle text-center">@teacher.Role</td>
+                    <td class="align-middle text-center">
+                        <button class="btn btn-sm btn-primary"
+                                onclick="editUser('@teacher.UserId', '@teacher.Username', '@teacher.Email', '@teacher.Password');">
+                            Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger"
+                                onclick="confirmDelete('@teacher.UserId', '@teacher.Username');">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                serialNumber++;
+            }
+        </tbody>
+    </table>
+</div>
+
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function confirmDelete(userId, username) {
+            if (confirm("Bạn có chắc chắn muốn xóa học sinh " + username + " không?")) {
+                $.ajax({
+                    url: '/Admin/Delete',
+                    type: 'POST',
+                    data: { id: userId },
+                    success: function (response) {
+                        if (response.success) {
+                            $('#row-' + userId).remove(); // Xóa hàng khỏi bảng
+                            alert("Đã xóa thành công học sinh " + username);
+                        } else {
+                            alert("Không thể xóa học sinh. Vui lòng thử lại.");
+                        }
+                    },
+                    error: function () {
+                        alert("Có lỗi xảy ra. Vui lòng thử lại.");
+                    }
+                });
+            }
+        }
+
+
+        
+        
+    </script>
+
+    }

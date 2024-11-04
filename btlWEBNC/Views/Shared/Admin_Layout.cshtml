@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Trang Admin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/AdminStyleSheet.css" />
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <button class="btn-blue" onclick="location.href='@Url.Action("ChangePassword", "Account")'">
+            <i class="fas fa-key"></i>
+            Đổi mật khẩu
+        </button>
+        <form asp-controller="Account" asp-action="Logout" method="post" style="display: inline;">
+            <button type="submit" class="btn-red">
+                <i class="fas fa-sign-out-alt"></i>
+                Đăng xuất
+            </button>
+        </form>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="brand">
+            <i class="fas fa-graduation-cap"></i> ADMIN
+        </div>
+        <a asp-controller="Admin" asp-action="Index" class="menu-item">
+            <i class="fas fa-home"></i> Trang chủ
+        </a>
+        <a asp-controller="Admin" asp-action="StudentManagement" class="menu-item">
+            <i class="fas fa-user-graduate"></i> Quản lý học sinh
+        </a>
+        <a asp-controller="Admin" asp-action="TeacherManagement" class="menu-item">
+            <i class="fas fa-chalkboard-teacher"></i> Quản lý giáo viên
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
