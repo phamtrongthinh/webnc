@@ -9,75 +9,75 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = btlWEBNC
 build_property.RootNamespace = btlWEBNC
-build_property.ProjectDir = C:\Users\Admin\Desktop\btlWEBNC\
+build_property.ProjectDir = C:\Users\Admin\Desktop\webnc\btlWEBNC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\btlWEBNC
+build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\webnc\btlWEBNC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Account/ChangePassword.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Account/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Account/ForgotPassword.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Account/Login.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Account/Register.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Admin/Index.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Admin/StudentManagement.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Admin/StudentManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3R1ZGVudE1hbmFnZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Admin/TeacherManagement.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Admin/TeacherManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGVhY2hlck1hbmFnZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Home/Index.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Home/Student.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Home/Student.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Home/Teacher.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Home/Teacher.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWFjaGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Shared/Admin_Layout.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Shared/Admin_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Shared/Error.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/_ViewImports.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/_ViewStart.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/btlWEBNC/Views/Shared/_Layout.cshtml]
+[C:/Users/Admin/Desktop/webnc/btlWEBNC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-dfffv9qmbu

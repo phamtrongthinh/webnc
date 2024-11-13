@@ -48,7 +48,30 @@ namespace btlWEBNC.Controllers
             return Json(new { success = false });
         }
 
-       
+        [HttpPost]
+        public async Task<IActionResult> Edit(int UserId, string Username, string Password)
+        {
+            var user = await _context.TblUsers.FindAsync(UserId);
+            if (user != null)
+            {
+                user.Username = Username;
+                user.Password = Password;
+
+                try
+                {
+                    await _context.SaveChangesAsync();
+                    return Json(new { success = true });
+                }
+                catch
+                {
+                    return Json(new { success = false });
+                }
+            }
+            return Json(new { success = false });
+        }
+
+
+
 
 
 
