@@ -24,15 +24,21 @@
             }
             @foreach (var student in Model)
             {
-                <tr>
+                <tr id="row-@student.UserId">
                     <td class="align-middle text-center">@serialNumber</td>
                     <td class="align-middle text-center">@student.Username</td>
                     <td class="align-middle text-center">@student.Email</td>
                     <td class="align-middle text-center">@student.Password</td>
                     <td class="align-middle text-center">@student.Role</td>
                     <td class="align-middle text-center">
-                        <a asp-action="Edit" asp-route-id="@student.UserId" class="btn btn-sm btn-primary">Edit</a>
-                        <a asp-action="Delete" asp-route-id="@student.UserId" class="btn btn-sm btn-danger">Delete</a>
+                        <button class="btn btn-sm btn-primary"
+                                onclick="editUser('@student.UserId', '@student.Username',  '@student.Password');">
+                            Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger"
+                                onclick="confirmDelete('@student.UserId', '@student.Username');">
+                            Delete
+                        </button>
                     </td>
                 </tr>
                 serialNumber++;
@@ -40,3 +46,119 @@
         </tbody>
     </table>
 </div>
+
+
+<!-- Modal để chỉnh sửa tên và mật khẩu  -->
+<div class="modal fade" id="editTeacherModal" tabindex="-1" aria-labelledby="editTeacherModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editTeacherModalLabel">Chỉnh sửa thông tin giáo viên</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editTeacherForm">
+                    <input type="hidden" id="editUserId" name="UserId">
+                    <div class="form-group">
+                        <label for="editUsername">Tên học sinh</label>
+                        <input type="text" class="form-control" id="editUsername" name="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPassword">Mật khẩu</label>
+                        <input type="password" class="form-control" id="editPassword" name="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function confirmDelete(userId, username) {
+            if (confirm("Bạn có chắc chắn muốn xóa học sinh " + username + " không?")) {
+                $.ajax({
+                    url: '/Admin/Delete',
+                    type: 'POST',
+                    data: { id: userId },
+                    success: function (response) {
+                        if (response.success) {
+                            $('#row-' + userId).remove(); // Xóa hàng khỏi bảng
+                            alert("Đã xóa thành công học sinh " + username);
+                        } else {
+                            alert("Không thể xóa học sinh. Vui lòng thử lại.");
+                        }
+                    },
+                    error: function () {
+                        alert("Có lỗi xảy ra. Vui lòng thử lại.");
+                    }
+                });
+            }
+        }
+
+
+        function editUser(userId, username, password) {
+            // Điền thông tin vào form trong modal
+            $('#editUserId').val(userId);
+            $('#editUsername').val(username);
+            $('#editPassword').val(password);
+
+            // Hiển thị modal
+            $('#editTeacherModal').modal('show');
+        }
+
+        $(document).ready(function () {
+            // Xử lý sự kiện submit form
+            $('#editTeacherForm').on('submit', function (e) {
+                e.preventDefault();
+
+                // Lấy dữ liệu từ form
+                var userId = $('#editUserId').val();
+                var username = $('#editUsername').val();
+                var password = $('#editPassword').val();
+
+                // Gửi yêu cầu AJAX để cập nhật thông tin
+                $.ajax({
+                    url: '/Admin/Edit', // Đường dẫn đến action Edit trên server
+                    type: 'POST',
+                    data: {
+                        UserId: userId,
+                        Username: username,
+                        Password: password
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            // Đóng modal
+                            $('#editTeacherModal').modal('hide');
+
+                            // Cập nhật thông tin trực tiếp trên bảng
+                            $('#row-' + userId + ' td:nth-child(2)').text(username);
+                            $('#row-' + userId + ' td:nth-child(4)').text(password);
+
+                            alert("Thông tin giáo viên đã được cập nhật thành công.");
+                        } else {
+                            alert("Không thể cập nhật thông tin. Vui lòng thử lại.");
+                        }
+                    },
+                    error: function () {
+                        alert("Có lỗi xảy ra. Vui lòng thử lại.");
+                    }
+                });
+            });
+        });
+
+
+
+
+
+    </script>
+
+}
