@@ -4052,6 +4052,7 @@
       "outputPath": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+        "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\NuGet.Config",
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

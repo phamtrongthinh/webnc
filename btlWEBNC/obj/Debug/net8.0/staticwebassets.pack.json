@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\wwwroot\\img\\account.png",
+      "PackagePath": "staticwebassets\\img\\account.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
