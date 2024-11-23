@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace btlWEBNC.Models;
 
-public partial class QuanLyLopHocTrucTuyen2Context : DbContext
+public partial class ApplicationDbContext : DbContext
 {
-    public QuanLyLopHocTrucTuyen2Context()
+    public ApplicationDbContext()
     {
     }
 
-    public QuanLyLopHocTrucTuyen2Context(DbContextOptions<QuanLyLopHocTrucTuyen2Context> options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
     }
@@ -29,7 +29,7 @@ public partial class QuanLyLopHocTrucTuyen2Context : DbContext
         {
             entity.HasKey(e => e.CourseId).HasName("PK__tblCours__C92D7187B629BF9B");
 
-            entity.ToTable("tblCourses", tb => tb.HasTrigger("trg_CheckTeacherRole"));
+            entity.ToTable("tblCourses");
 
             entity.Property(e => e.CourseId).HasColumnName("CourseID");
             entity.Property(e => e.TeacherId).HasColumnName("TeacherID");

@@ -3,84 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\shared\\home_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\shared\\home_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\home\\teacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\home\\teacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\nuget.config||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:nuget.config||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\admin\\studentmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\admin\\studentmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\shared\\admin_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\shared\\admin_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\admin\\teachermanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\admin\\teachermanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\home\\createcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\home\\createcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\models\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:models\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\home\\student.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\home\\student.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -104,7 +36,7 @@
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -136,251 +68,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Home_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Shared\\Home_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Home_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Shared\\Home_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Home_Layout.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAADwvyAAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-22T10:58:31.306Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AQIAAHgAAAAAAAAAAADwv2EAAAAdAAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAowIQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:48:33.426Z",
+              "WhenOpened": "2024-11-23T15:49:06.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Teacher.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\Teacher.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Teacher.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\Teacher.cshtml",
-              "RelativeToolTip": "Views\\Home\\Teacher.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "CreateCourse.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\CreateCourse.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\CreateCourse.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\CreateCourse.cshtml",
+              "RelativeToolTip": "Views\\Home\\CreateCourse.cshtml",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAowDEAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-22T15:31:33.433Z",
+              "WhenOpened": "2024-11-02T16:13:42.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "StudentManagement.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Admin\\StudentManagement.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\StudentManagement.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Admin\\StudentManagement.cshtml",
-              "RelativeToolTip": "Views\\Admin\\StudentManagement.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-22T10:48:20.997Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAgwCEAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:47:11.098Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAADAAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T02:18:40.48Z",
+              "WhenOpened": "2024-11-22T10:47:11.098Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Account\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\ChangePassword.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Account\\ChangePassword.cshtml",
-              "RelativeToolTip": "Views\\Account\\ChangePassword.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T01:30:33.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Views\\Account\\Register.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAGwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T03:00:20.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-22T11:00:53.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "nuget.config",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\nuget.config",
-              "RelativeDocumentMoniker": "nuget.config",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\nuget.config",
-              "RelativeToolTip": "nuget.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-22T11:11:08.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "nuget.config",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\nuget.config",
-              "RelativeDocumentMoniker": "nuget.config",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\nuget.config",
-              "RelativeToolTip": "nuget.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-22T11:13:33.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-22T11:13:39.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TeacherManagement.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Admin\\TeacherManagement.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\TeacherManagement.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Admin\\TeacherManagement.cshtml",
-              "RelativeToolTip": "Views\\Admin\\TeacherManagement.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T08:16:32.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Admin_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Shared\\Admin_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Admin_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Shared\\Admin_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Admin_Layout.cshtml",
-              "ViewState": "AQIAABEAAAAAAAAAAADwvzAAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-14T01:28:07.483Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAgwDoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T07:42:15.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T07:42:27.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ChangePasswordViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Models\\ChangePasswordViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ChangePasswordViewModel.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Models\\ChangePasswordViewModel.cs",
-              "RelativeToolTip": "Models\\ChangePasswordViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T07:19:48.721Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAwwFkAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T01:36:20.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Student.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\Student.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Student.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\Student.cshtml",
-              "RelativeToolTip": "Views\\Home\\Student.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T16:13:42.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-02T15:59:55.12Z"
             }
           ]
         }

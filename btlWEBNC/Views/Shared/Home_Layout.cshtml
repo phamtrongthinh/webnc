@@ -4,73 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LMS Dashboard</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <style>
         .sidebar {
-            height: calc(100vh - 4rem - 3rem); /* 4rem for header, 3rem for footer */
+            height: calc(100vh - 4rem - 3rem);
             min-width: 250px;
         }
+
         .main-content {
             height: calc(100vh - 4rem - 3rem);
             overflow-y: auto;
         }
+
+        .nav-link {
+            color: white;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s;
+        }
+
+            .nav-link:hover {
+                background-color: #0d6efd;
+                color: white;
+            }
     </style>
 </head>
-<body class="flex flex-col h-screen">
+<body class="d-flex flex-column min-vh-100">
     <!-- Header -->
-    <header class="bg-blue-600 text-white h-16 flex items-center justify-between px-6 shadow-md">
-        <!-- Logo and Brand -->
-        <div class="flex items-center space-x-4">
-            <img src="~/img/logo.png" alt="Logo" class="rounded w-10 h-10">
-            <span class="text-xl font-bold">LMS System</span>
-        </div>
-        
-        <!-- User Info and Logout -->
-        <div class="flex items-center space-x-4">
-            <div class="flex items-center space-x-2">
-                <img src="~/img/account.png" alt="User Avatar" class="rounded-full w-10 h-10">
-                <span>@User.Identity.Name</span>
+    <header class="bg-primary text-white py-3">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo and Brand -->
+                <div class="d-flex align-items-center gap-3">
+                    <img src="~/img/logo.png" alt="Logo" class="rounded" style="width: 40px; height: 40px;">
+                    <span class="fs-4 fw-bold">LMS System</span>
+                </div>
+
+                <!-- User Info and Logout -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="~/img/account.png" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                        <span>@User.Identity.Name</span>
+                    </div>
+                    <form asp-controller="Account" asp-action="Logout" method="post">
+                        <button class="btn btn-danger">Đăng xuất</button>
+                    </form>
+                </div>
             </div>
-            <button class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded transition-colors">
-                Đăng xuất
-            </button>
         </div>
     </header>
 
     <!-- Main Content Area -->
-    <div class="flex flex-1 overflow-hidden">
+    <div class="flex-grow-1 d-flex overflow-hidden">
         <!-- Sidebar Navigation -->
-        <nav class="sidebar bg-gray-800 text-white p-4">
-            <ul class="space-y-3">
-                <li>
-                    <a href="#" class="flex items-center space-x-2 p-2 rounded hover:bg-blue-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                        </svg>
+        <nav class="sidebar bg-dark text-white p-3">
+            <ul class="nav flex-column gap-2">
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Index" class="nav-link d-flex align-items-center gap-2">
+                        <i class="fas fa-home"></i>
                         <span>Trang chủ</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="flex items-center space-x-2 p-2 rounded hover:bg-blue-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center gap-2">
+                        <i class="fas fa-calendar-alt"></i>
                         <span>Lịch học</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="flex items-center space-x-2 p-2 rounded hover:bg-blue-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex align-items-center gap-2">
+                        <i class="fas fa-book-open"></i>
                         <span>Tham gia khóa học</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="flex items-center space-x-2 p-2 rounded hover:bg-blue-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="CreateCourse" class="nav-link d-flex align-items-center gap-2">
+                        <i class="fas fa-plus-circle"></i>
                         <span>Tạo khóa học</span>
                     </a>
                 </li>
@@ -78,16 +90,26 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="main-content flex-1 bg-gray-100 p-6">
-            <h1 class="text-2xl font-bold mb-6">Dashboard</h1>
-            <div class="bg-white p-6 rounded-lg shadow">
-                @RenderBody()
-                <p>Nội dung chính sẽ được hiển thị ở đây...</p>
-            </div>
+        <main class="main-content flex-grow-1 bg-light p-4">
+            @RenderBody()
         </main>
     </div>
 
     <!-- Footer -->
-    <footer class="h-12 bg-gray-800"></footer>
+    <footer class="bg-dark text-white py-3">
+        <div class="container-fluid">
+            <div class="text-center">
+                &copy; 2024 LMS System. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
 </body>
 </html>

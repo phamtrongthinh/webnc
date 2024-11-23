@@ -28,7 +28,35 @@ namespace btlWEBNC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            try
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+
+            }
+            var existingUser = await _context.TblUsers.FirstOrDefaultAsync(x => x.Email == model.Email);
+            if (existingUser != null)
+            {
+                ModelState.AddModelError("Email", "Email này đã được sử dụng");
+                return View(model);
+            }
+            //lấy thông tin user đó
+            var newUser = new TblUser
+            {
+                Username = model.Username,
+                Email = model.Email,
+                Password = model.Password,
+                Role = model.Role,
+            };
+            _context.TblUsers.Add(newUser);
+            await _context.SaveChangesAsync();
+            // Lưu thông báo thành công vào TempData
+            TempData["SuccessMessage"] = "Đăng ký thành công! Bạn có thể tạo tài khoản mới.";
+
+            // Redirect về lại trang đăng ký để xóa ModelState và dữ liệu cũ
+            return RedirectToAction("Register");
+        }
+        /*
+          try
             {
                 if (!ModelState.IsValid)
                 {
@@ -64,8 +92,7 @@ namespace btlWEBNC.Controllers
                 return View(model);
             }
 
-        }
-
+         */
         [HttpGet]
         public IActionResult Login()
         {
@@ -100,7 +127,9 @@ namespace btlWEBNC.Controllers
                  {
                      new Claim(ClaimTypes.Name, user.Username),
                      new Claim(ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Role, user.Role)
+                    new Claim(ClaimTypes.Role, user.Role),
+                    new Claim("UserID",user.UserId.ToString())
+                   
                };
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 

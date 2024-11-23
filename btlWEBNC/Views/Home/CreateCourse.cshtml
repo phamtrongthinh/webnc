@@ -1,0 +1,50 @@
+﻿@model btlWEBNC.Models.CourseViewModel
+@{
+    Layout = "Home_layout";
+}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary">
+            <h3 class="mb-0 ">Đăng ký Khóa Học Mới</h3>
+        </div>
+        <div class="card-body">
+            <form asp-action="CreateCourse" method="post">
+                <!-- Teacher Info -->
+                <div class="mb-3">
+                    <label class="form-label">Giáo viên phụ trách</label>
+                    <input type="text" class="form-control" value="@User.Identity.Name" readonly>
+                </div>
+
+                <!-- Title -->
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">Tên khóa học <span class="text-danger">*</span></label>
+                    <input asp-for="Title" class="form-control" required>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <!-- Price -->
+                <div class="mb-3">
+                    <label asp-for="Price" class="form-label">Giá (VNĐ) <span class="text-danger">*</span></label>
+                    <input asp-for="Price" type="number" class="form-control" required min="0">
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label">Mô tả khóa học</label>
+                    <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Lưu khóa học
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
