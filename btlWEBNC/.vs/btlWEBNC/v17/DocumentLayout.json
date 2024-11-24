@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\shared\\home_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\shared\\home_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\models\\courselistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:models\\courselistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\models\\tblcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:models\\tblcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\views\\home\\createcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:views\\home\\createcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|c:\\users\\admin\\desktop\\webnc\\btlwebnc\\models\\tblenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B23E56-997E-47BC-8DFE-F226AF7A7AD8}|btlWEBNC.csproj|solutionrelative:models\\tblenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +60,7 @@
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,41 +92,118 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:37:29.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Shared\\Home_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Home_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Shared\\Home_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Home_Layout.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEgAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-24T15:17:17.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-24T01:57:14.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAkwDUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:47:11.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CourseListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Models\\CourseListViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\CourseListViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Models\\CourseListViewModel.cs",
+              "RelativeToolTip": "Models\\CourseListViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T02:45:51.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TblCourse.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Models\\TblCourse.cs",
+              "RelativeDocumentMoniker": "Models\\TblCourse.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Models\\TblCourse.cs",
+              "RelativeToolTip": "Models\\TblCourse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T02:35:04.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TblEnrollment.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Models\\TblEnrollment.cs",
+              "RelativeDocumentMoniker": "Models\\TblEnrollment.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Models\\TblEnrollment.cs",
+              "RelativeToolTip": "Models\\TblEnrollment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T02:35:02.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAowIQAAAARAAAA",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAI8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T15:49:06.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "CreateCourse.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\CreateCourse.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\CreateCourse.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Views\\Home\\CreateCourse.cshtml",
               "RelativeToolTip": "Views\\Home\\CreateCourse.cshtml",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAowDEAAAAGAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAADIAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-02T16:13:42.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAgwCEAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:47:11.098Z",
               "EditorCaption": ""
             }
           ]

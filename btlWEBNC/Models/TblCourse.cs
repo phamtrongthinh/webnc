@@ -15,5 +15,7 @@ public partial class TblCourse
 
     public int? TeacherId { get; set; }
 
+    public virtual ICollection<TblEnrollment> TblEnrollments { get; set; } = new List<TblEnrollment>();
+
     public virtual TblUser? Teacher { get; set; }
 }

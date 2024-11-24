@@ -1,11 +1,50 @@
-﻿@{
+﻿@model IEnumerable<btlWEBNC.Models.CourseListViewModel>
+@{
     ViewData["Title"] = "Home Page";
     Layout = "Home_Layout";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="fas fa-check-circle"></i> @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
 
-<h1>Xin chao day la index </h1>
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <i class="fas fa-exclamation-circle"></i> @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<h2>Các khóa học của bạn</h2>
+@if (Model.Any())
+{
+    <div class="row">
+        @foreach (var course in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@course.Title</h5>
+                        <p class="card-text">@course.Description</p>
+                        <p class="card-text"><strong>Giá:</strong> @course.Price.ToString("N0") VNĐ</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>Hiện tại bạn chưa tạo khóa học nào.</p>
+}
+
+<script>
+    // Tự động ẩn alert sau 3 giây
+    setTimeout(function () {
+        $('.alert').alert('close');
+    }, 3000);
+</script>

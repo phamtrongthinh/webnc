@@ -17,6 +17,8 @@ public partial class QuanLyLopHocTrucTuyen2Context : DbContext
 
     public virtual DbSet<TblCourse> TblCourses { get; set; }
 
+    public virtual DbSet<TblEnrollment> TblEnrollments { get; set; }
+
     public virtual DbSet<TblUser> TblUsers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -38,6 +40,28 @@ public partial class QuanLyLopHocTrucTuyen2Context : DbContext
             entity.HasOne(d => d.Teacher).WithMany(p => p.TblCourses)
                 .HasForeignKey(d => d.TeacherId)
                 .HasConstraintName("FK__tblCourse__Teach__5165187F");
+        });
+
+        modelBuilder.Entity<TblEnrollment>(entity =>
+        {
+            entity.HasKey(e => e.EnrollmentId).HasName("PK__tblEnrol__7F6877FB36C962AE");
+
+            entity.ToTable("tblEnrollments", tb => tb.HasTrigger("trg_CheckStudentRole"));
+
+            entity.Property(e => e.EnrollmentId).HasColumnName("EnrollmentID");
+            entity.Property(e => e.CourseId).HasColumnName("CourseID");
+            entity.Property(e => e.EnrollmentDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.StudentId).HasColumnName("StudentID");
+
+            entity.HasOne(d => d.Course).WithMany(p => p.TblEnrollments)
+                .HasForeignKey(d => d.CourseId)
+                .HasConstraintName("FK__tblEnroll__Cours__571DF1D5");
+
+            entity.HasOne(d => d.Student).WithMany(p => p.TblEnrollments)
+                .HasForeignKey(d => d.StudentId)
+                .HasConstraintName("FK__tblEnroll__Stude__5629CD9C");
         });
 
         modelBuilder.Entity<TblUser>(entity =>
