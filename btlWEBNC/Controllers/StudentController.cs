@@ -1,12 +1,139 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using btlWEBNC.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace btlWEBNC.Controllers
 {
     public class StudentController : Controller
     {
-        public IActionResult Index()
+        private readonly QuanLyLopHocTrucTuyen2Context _context;
+
+        public StudentController(QuanLyLopHocTrucTuyen2Context context)
         {
+            _context = context;
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> StudentIndex()
+        {
+           
+            // Get the current student's ID from the claims
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
+            if (!int.TryParse(userId, out int studentId))
+            {
+                TempData["Error"] = "Không thể xác định thông tin học sinh.";
+                return RedirectToAction("StudentIndex", "Student");
+            }
+
+            // Retrieve the list of courses that the student has registered for
+            var enrolledCourses = await _context.TblEnrollments
+                .Where(e => e.StudentId == studentId)
+                .Select(e => new EnrollmentListViewModel
+                {
+                    CourseId = e.Course.CourseId,
+                    Title = e.Course.Title,
+                    Description = e.Course.Description,
+                    Price = e.Course.Price,
+                    TeacherName = e.Course.Teacher != null ? e.Course.Teacher.Username : "N/A", // Assuming Teacher navigation property
+                   
+                })
+                .ToListAsync();
+
+            return View(enrolledCourses); // Pass the list to the Index view
+        }
+
+
+
+        [HttpGet]
+        public IActionResult StudentCreateCourse()
+        {
+            if (!User.IsInRole("Teacher"))
+            {
+                TempData["Error"] = "Chức năng này chỉ dành cho giáo viên";
+                return RedirectToAction("StudentIndex", "Student");
+            }
             return View();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> StudentRegisterCourse()
+        {
+           // Get list of courses that the student is not already enrolled in
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
+            if (!int.TryParse(userId, out int studentId))
+            {
+                TempData["Error"] = "Không thể xác định thông tin học sinh.";
+                return RedirectToAction("StudentIndex", "Student");
+            }
+
+            var availableCourses = await _context.TblCourses
+                .Where(c => !_context.TblEnrollments.Any(e => e.StudentId == studentId && e.CourseId == c.CourseId))
+                .Select(c => new EnrollmentListViewModel
+                {
+                    CourseId = c.CourseId,
+                    Title = c.Title,
+                    Description = c.Description,
+                    Price = c.Price,
+                    TeacherName = c.Teacher != null ? c.Teacher.Username : "N/A" // Assuming Teacher navigation property
+                })
+                .ToListAsync();
+
+            if (availableCourses == null || !availableCourses.Any())
+            {
+                TempData["Error"] = "Không có khóa học nào để hiển thị. lmao lamo";
+                return RedirectToAction("StudentIndex", "Student");
+            }
+
+            return View(availableCourses); // View will be RegisterCourse.cshtml
+          
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> StudentRegisterCourse(int CourseID)        {
+
+            // Get the current student's ID from the claims
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
+            if (!int.TryParse(userId, out int studentId))
+            {
+                TempData["Error"] = "Không thể xác định thông tin học sinh.";
+                return RedirectToAction("StudentIndex", "Student");
+            }
+
+            // Check if the student is already enrolled in the course
+            var existingEnrollment = await _context.TblEnrollments
+                .FirstOrDefaultAsync(e => e.StudentId == studentId && e.CourseId == CourseID);
+
+            if (existingEnrollment != null)
+            {
+                TempData["Error"] = "Bạn đã đăng ký khóa học này rồi.";
+                return RedirectToAction("StudentRegisterCourse", "Student");
+            }
+
+            // Create a new enrollment
+            var newEnrollment = new TblEnrollment
+            {
+                StudentId = studentId,
+                CourseId = CourseID,
+                EnrollmentDate = DateTime.Now
+            };
+
+            // Save to the database
+            _context.TblEnrollments.Add(newEnrollment);
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Đăng ký khóa học thành công!";
+            return RedirectToAction("StudentIndex", "Student");
+        }
+
+
+
+
+
+
+
     }
+
 }

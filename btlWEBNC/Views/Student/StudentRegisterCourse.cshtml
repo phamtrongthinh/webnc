@@ -1,0 +1,55 @@
+﻿@model IEnumerable<btlWEBNC.Models.EnrollmentListViewModel>
+@{
+    Layout = "Student_layout";
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+
+<div class="container mt-4">
+    <h3 class="mb-4">Đăng ký khóa học</h3>
+
+    @if (Model.Any())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Tên khóa học</th>
+                    <th>Mô tả</th>
+                    <th>Giá</th>
+                    <th>Giảng viên</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var course in Model)
+                {
+                    <tr>
+                        <td>@course.Title</td>
+                        <td>@course.Description</td>
+                        <td>@course.Price.ToString("N0") VNĐ</td>
+                        <td>@course.TeacherName</td> <!-- Display Teacher's Name -->
+                        <td>
+                            <form asp-action="RegisterCourse" method="post">
+                                <input type="hidden" name="CourseID" value="@course.CourseId" />
+                                <button type="submit" class="btn btn-primary">Đăng ký</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Không có khóa học nào để đăng ký.</p>
+    }
+</div>

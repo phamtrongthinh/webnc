@@ -283,6 +283,7 @@ C:\Users\Admin\Desktop\New folder (2)\webnc\btlWEBNC\obj\Debug\net8.0\refint\btl
 C:\Users\Admin\Desktop\New folder (2)\webnc\btlWEBNC\obj\Debug\net8.0\btlWEBNC.pdb
 C:\Users\Admin\Desktop\New folder (2)\webnc\btlWEBNC\obj\Debug\net8.0\btlWEBNC.genruntimeconfig.cache
 C:\Users\Admin\Desktop\New folder (2)\webnc\btlWEBNC\obj\Debug\net8.0\ref\btlWEBNC.dll
+C:\Users\Admin\Desktop\webnc\btlWEBNC\bin\Debug\net8.0\nuget.config
 C:\Users\Admin\Desktop\webnc\btlWEBNC\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Admin\Desktop\webnc\btlWEBNC\bin\Debug\net8.0\appsettings.json
 C:\Users\Admin\Desktop\webnc\btlWEBNC\bin\Debug\net8.0\btlWEBNC.staticwebassets.runtime.json
@@ -426,4 +427,3 @@ C:\Users\Admin\Desktop\webnc\btlWEBNC\obj\Debug\net8.0\refint\btlWEBNC.dll
 C:\Users\Admin\Desktop\webnc\btlWEBNC\obj\Debug\net8.0\btlWEBNC.pdb
 C:\Users\Admin\Desktop\webnc\btlWEBNC\obj\Debug\net8.0\btlWEBNC.genruntimeconfig.cache
 C:\Users\Admin\Desktop\webnc\btlWEBNC\obj\Debug\net8.0\ref\btlWEBNC.dll
-C:\Users\Admin\Desktop\webnc\btlWEBNC\bin\Debug\net8.0\nuget.config

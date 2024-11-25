@@ -119,14 +119,7 @@ namespace btlWEBNC.Controllers
 
 
 
-        public IActionResult Student()
-        {
-            return View();
-        }
-        public IActionResult Admin()
-        {
-            return View();
-        }
+        
 
 
     }

@@ -138,7 +138,7 @@ namespace btlWEBNC.Controllers
                       new ClaimsPrincipal(claimsIdentity));
 
                 // Chuyển hướng theo role
-                if (user.Role == "Student") return RedirectToAction("Index", "Home");
+                if (user.Role == "Student") return RedirectToAction("StudentIndex", "Student");
                 if (user.Role == "Teacher") return RedirectToAction("Index", "Home");
                 if (user.Role == "Admin") return RedirectToAction("Index", "Admin");
 
