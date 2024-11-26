@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("btlWEBNC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f65b32234abc110360202b9f29a295ce907f3c46")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae9bf99fcc8404dfd84721bb2dd13e16da4bc7bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("btlWEBNC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("btlWEBNC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

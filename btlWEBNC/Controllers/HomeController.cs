@@ -40,9 +40,77 @@ namespace btlWEBNC.Controllers
             return View(courses);
         }
 
+        // Display the form for uploading materials
+        [HttpGet]
+        [Authorize(Roles = "Teacher")]
+        public async Task<IActionResult> UploadMaterials(int courseId)
+        {
+            // Check if the course exists and belongs to the logged-in teacher
+            var teacherIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserID");
+            if (teacherIdClaim == null || !int.TryParse(teacherIdClaim.Value, out int teacherId))
+            {
+                TempData["Error"] = "Không thể xác định giáo viên. Vui lòng đăng nhập lại.";
+                return RedirectToAction("Index");
+            }
 
-        
-         [HttpGet]
+            var course = await _context.TblCourses
+                .FirstOrDefaultAsync(c => c.CourseId == courseId && c.TeacherId == teacherId);
+
+            if (course == null)
+            {
+                TempData["Error"] = "Khóa học không tồn tại hoặc bạn không có quyền.";
+                return RedirectToAction("Index");
+            }
+            // Retrieve existing materials for this course
+            var existingMaterials = await _context.TblLearningMaterials
+                .Where(m => m.CourseId == courseId && m.TeacherId == teacherId)
+                .ToListAsync();
+
+            ViewBag.CourseId = courseId;
+            ViewBag.ExistingMaterials = existingMaterials; // Pass the materials to the view
+            return View();
+            
+        }
+
+        // Handle the form submission
+        [HttpPost]
+        [Authorize(Roles = "Teacher")]
+        public async Task<IActionResult> UploadMaterials(LearningMaterialViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Get the TeacherId from claims
+            var teacherIdClaim = User.Claims.FirstOrDefault(c => c.Type == "UserID");
+            if (teacherIdClaim == null || !int.TryParse(teacherIdClaim.Value, out int teacherId))
+            {
+                TempData["Error"] = "Không thể xác định giáo viên. Vui lòng đăng nhập lại.";
+                return RedirectToAction("Index");
+            }
+
+            // Create a new learning material entry
+            var newMaterial = new TblLearningMaterial
+            {
+                Title = model.Title,
+                Description = model.Description,
+                CourseId = model.CourseId,
+                TeacherId = teacherId,
+                CreatedDate = DateTime.Now
+            };
+
+            _context.TblLearningMaterials.Add(newMaterial);
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Tài liệu đã được tải lên thành công!";
+            return RedirectToAction("Index");
+        }
+
+
+
+
+        [HttpGet]
         public IActionResult RegisterCourse()
         {
             // Kiểm tra nếu không phải Teacher thì redirect về trang thông báo

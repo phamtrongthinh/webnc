@@ -1,0 +1,43 @@
+﻿@model btlWEBNC.Models.LearningMaterialViewModel
+
+@{
+    ViewData["Title"] = "Upload Learning Materials";
+    Layout = "Home_Layout";
+}
+
+<h2>Tải lên tài liệu cho khóa học</h2>
+
+<!-- Display previously uploaded materials -->
+@if (ViewBag.ExistingMaterials != null && ViewBag.ExistingMaterials.Count > 0)
+{
+    <h3>Các tài liệu đã tải lên:</h3>
+    <ul class="list-group mb-4">
+        @foreach (var material in ViewBag.ExistingMaterials)
+        {
+            <li class="list-group-item">
+                <strong>@material.Title</strong><br />
+                <span>@material.Description</span><br />
+                <small>Ngày tạo: @material.CreatedDate.ToString("dd/MM/yyyy")</small>
+            </li>
+        }
+    </ul>
+}
+
+<!-- Form to upload new material -->
+<form asp-action="UploadMaterials" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Title">Tên tài liệu</label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Description">Nội dung đăng tải</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="CourseId" />
+
+    <button type="submit" class="btn btn-primary">Tải lên</button>
+</form>

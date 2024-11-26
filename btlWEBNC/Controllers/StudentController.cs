@@ -44,6 +44,59 @@ namespace btlWEBNC.Controllers
             return View(enrolledCourses); // Pass the list to the Index view
         }
 
+        public async Task<IActionResult> ViewCourseDetails(int courseId)
+        {
+            // Get the current student's ID from the claims
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "UserID")?.Value;
+            if (!int.TryParse(userId, out int studentId))
+            {
+                TempData["Error"] = "Không thể xác định thông tin học sinh.";
+                return RedirectToAction("StudentIndex", "Student");
+            }
+
+            // Verify if the student is enrolled in the course
+            var enrollment = await _context.TblEnrollments
+                .FirstOrDefaultAsync(e => e.StudentId == studentId && e.CourseId == courseId);
+
+            if (enrollment == null)
+            {
+                TempData["Error"] = "Bạn không đăng ký khóa học này.";
+                return RedirectToAction("StudentIndex", "Student");
+            }
+
+            // Retrieve course information along with learning materials
+            var courseDetails = await _context.TblCourses
+                .Include(c => c.TblLearningMaterials) // Assuming there's a navigation property for LearningMaterials
+                .FirstOrDefaultAsync(c => c.CourseId == courseId);
+
+            if (courseDetails == null)
+            {
+                TempData["Error"] = "Không tìm thấy khóa học.";
+                return RedirectToAction("StudentIndex", "Student");
+            }
+
+            // Prepare a view model to pass course details and learning materials
+            var courseDetailViewModel = new CourseDetailViewModel
+            {
+                CourseId = courseDetails.CourseId,
+                Title = courseDetails.Title,
+                Description = courseDetails.Description,
+                Price = courseDetails.Price,
+                TeacherName = courseDetails.Teacher != null ? courseDetails.Teacher.Username : "N/A",
+                LearningMaterials = courseDetails.TblLearningMaterials.Select(lm => new LearningMaterialViewModel2
+                {
+                    MaterialId = lm.MaterialId,       // This now matches the view model property
+                    Title = lm.Title,
+                    Description = lm.Description,
+                    CreatedDate = lm.CreatedDate      // This now matches the view model property
+                }).ToList()
+            };
+
+            return View(courseDetailViewModel); // Create a view named ViewCourseDetails.cshtml
+        }
+
+
+
 
 
         [HttpGet]

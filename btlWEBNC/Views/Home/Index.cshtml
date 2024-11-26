@@ -28,7 +28,11 @@
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">@course.Title</h5>
+                        <h5 class="card-title">
+                            <a href="@Url.Action("UploadMaterials", "Home", new { courseId = course.CourseId })">
+                                @course.Title
+                            </a>
+                        </h5>
                         <p class="card-text">@course.Description</p>
                         <p class="card-text"><strong>Giá:</strong> @course.Price.ToString("N0") VNĐ</p>
                     </div>

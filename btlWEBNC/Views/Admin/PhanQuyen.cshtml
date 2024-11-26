@@ -1,0 +1,121 @@
+﻿@model IEnumerable<TblUser>
+@{
+    ViewData["Title"] = "Role Management";
+    Layout = "Admin_Layout";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Quản lý Phân Quyền</h2>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="text-center">STT</th>
+                <th scope="col" class="text-center">Username</th>
+                <th scope="col" class="text-center">Email</th>
+                <th scope="col" class="text-center">Role</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int serialNumber = 1; // Counter for numbering
+            }
+            @foreach (var user in Model)
+            {
+                <tr id="row-@user.UserId">
+                    <td class="align-middle text-center">@serialNumber</td>
+                    <td class="align-middle text-center">@user.Username</td>
+                    <td class="align-middle text-center">@user.Email</td>
+                    <td class="align-middle text-center">@user.Role</td>
+                    <td class="align-middle text-center">
+                        <button class="btn btn-sm btn-primary"
+                                onclick="editRole('@user.UserId', '@user.Role');">
+                            Change Role
+                        </button>
+                    </td>
+                </tr>
+                serialNumber++;
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal for Editing User Role -->
+<div class="modal fade" id="editRoleModal" tabindex="-1" aria-labelledby="editRoleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editRoleModalLabel">Chỉnh sửa vai trò</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editRoleForm">
+                    <input type="hidden" id="editUserId" name="UserId">
+                    <div class="form-group">
+                        <label for="editRole">Vai trò</label>
+                        <select class="form-control" id="editRole" name="Role" required>
+                            <option value="Admin">Admin</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Student">Student</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function editRole(userId, currentRole) {
+            // Fill in the form with the current role
+            $('#editUserId').val(userId);
+            $('#editRole').val(currentRole);
+
+            // Show the modal
+            $('#editRoleModal').modal('show');
+        }
+
+        $(document).ready(function () {
+            // Handle form submission for editing role
+            $('#editRoleForm').on('submit', function (e) {
+                e.preventDefault();
+
+                // Get form data
+                var userId = $('#editUserId').val();
+                var newRole = $('#editRole').val();
+
+                // Send AJAX request to update role
+                $.ajax({
+                    url: '/Admin/UpdateRole',
+                    type: 'POST',
+                    data: {
+                        UserId: userId,
+                        Role: newRole
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            // Close the modal
+                            $('#editRoleModal').modal('hide');
+
+                            // Update the role in the table
+                            $('#row-' + userId + ' td:nth-child(4)').text(newRole);
+
+                            alert("Role đã được cập nhật thành công.");
+                        } else {
+                            alert("Không thể cập nhật role. Vui lòng thử lại.");
+                        }
+                    },
+                    error: function () {
+                        alert("Có lỗi xảy ra. Vui lòng thử lại.");
+                    }
+                });
+            });
+        });
+    </script>
+}

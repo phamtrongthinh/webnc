@@ -1,0 +1,30 @@
+﻿@model CourseDetailViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "Student_Layout";
+}
+<div class="container mt-4">
+    <h3>@Model.Title</h3>
+    <p>@Model.Description</p>
+    <p><strong>Giá:</strong> @Model.Price.ToString("N0") VNĐ</p>
+    <p><strong>Giảng viên:</strong> @Model.TeacherName</p>
+
+    <h4 class="mt-4">Tài liệu học tập</h4>
+    @if (Model.LearningMaterials.Any())
+    {
+        <ul class="list-group">
+            @foreach (var material in Model.LearningMaterials)
+            {
+                <li class="list-group-item">
+                    <h5>@material.Title</h5>
+                    <p>@material.Description</p>
+                    <small><i>Ngày tạo: @material.CreatedDate?.ToString("dd/MM/yyyy")</i></small>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Chưa có tài liệu học tập nào.</p>
+    }
+</div>

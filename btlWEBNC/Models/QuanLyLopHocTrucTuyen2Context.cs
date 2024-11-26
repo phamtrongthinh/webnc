@@ -19,6 +19,8 @@ public partial class QuanLyLopHocTrucTuyen2Context : DbContext
 
     public virtual DbSet<TblEnrollment> TblEnrollments { get; set; }
 
+    public virtual DbSet<TblLearningMaterial> TblLearningMaterials { get; set; }
+
     public virtual DbSet<TblUser> TblUsers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -62,6 +64,31 @@ public partial class QuanLyLopHocTrucTuyen2Context : DbContext
             entity.HasOne(d => d.Student).WithMany(p => p.TblEnrollments)
                 .HasForeignKey(d => d.StudentId)
                 .HasConstraintName("FK__tblEnroll__Stude__5629CD9C");
+        });
+
+        modelBuilder.Entity<TblLearningMaterial>(entity =>
+        {
+            entity.HasKey(e => e.MaterialId).HasName("PK__tblLearn__C50613173CE18C1A");
+
+            entity.ToTable("tblLearningMaterials");
+
+            entity.Property(e => e.MaterialId).HasColumnName("MaterialID");
+            entity.Property(e => e.CourseId).HasColumnName("CourseID");
+            entity.Property(e => e.CreatedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.TeacherId).HasColumnName("TeacherID");
+            entity.Property(e => e.Title).HasMaxLength(255);
+
+            entity.HasOne(d => d.Course).WithMany(p => p.TblLearningMaterials)
+                .HasForeignKey(d => d.CourseId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tblLearni__Cours__60A75C0F");
+
+            entity.HasOne(d => d.Teacher).WithMany(p => p.TblLearningMaterials)
+                .HasForeignKey(d => d.TeacherId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tblLearni__Teach__619B8048");
         });
 
         modelBuilder.Entity<TblUser>(entity =>

@@ -29,14 +29,16 @@
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">@course.Title</h5>
-                            <p class="card-text">@course.Description</p>
-                            <p class="card-text">
-                                <strong>Giá:</strong> @course.Price.ToString("N0") VNĐ
-                            </p>
-                            <p class="card-text">
-                                <strong>Giảng viên:</strong> @course.TeacherName
-                            </p>
+                            <a asp-controller="Student" asp-action="ViewCourseDetails" asp-route-courseId="@course.CourseId" class="text-decoration-none">
+                                <h5 class="card-title">@course.Title</h5>
+                                <p class="card-text">@course.Description</p>
+                                <p class="card-text">
+                                    <strong>Giá:</strong> @course.Price.ToString("N0") VNĐ
+                                </p>
+                                <p class="card-text">
+                                    <strong>Giảng viên:</strong> @course.TeacherName
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>

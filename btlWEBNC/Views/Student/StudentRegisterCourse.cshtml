@@ -38,7 +38,7 @@
                         <td>@course.Price.ToString("N0") VNĐ</td>
                         <td>@course.TeacherName</td> <!-- Display Teacher's Name -->
                         <td>
-                            <form asp-action="RegisterCourse" method="post">
+                            <form asp-action="StudentRegisterCourse" method="post">
                                 <input type="hidden" name="CourseID" value="@course.CourseId" />
                                 <button type="submit" class="btn btn-primary">Đăng ký</button>
                             </form>

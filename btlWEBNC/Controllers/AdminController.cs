@@ -70,10 +70,40 @@ namespace btlWEBNC.Controllers
             return Json(new { success = false });
         }
 
+        [HttpGet]
+        public async Task<IActionResult> PhanQuyen()
+        {
+            // Retrieve the list of all users from the database
+            var users = await _context.TblUsers.ToListAsync();
+            return View("PhanQuyen",users);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateRole(int UserId, string Role)
+        {
+            var user = await _context.TblUsers.FindAsync(UserId);
+            if (user != null)
+            {
+                user.Role = Role;
+
+                try
+                {
+                    await _context.SaveChangesAsync();
+                    return Json(new { success = true });
+                }
+                catch
+                {
+                    return Json(new { success = false });
+                }
+            }
+            return Json(new { success = false });
+        }
 
 
 
 
+       
 
 
 
