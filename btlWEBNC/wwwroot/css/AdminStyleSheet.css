@@ -46,6 +46,9 @@
     padding: 20px;
     height: 100vh;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
 }
 
 .brand {
@@ -77,7 +80,37 @@
     margin-left: 250px;
     padding: 80px 20px 20px;
     background: #f5f6fa;
-    min-height: 100vh;
+    min-height: calc(100vh - 60px);
+}
+
+/* Footer */
+.footer {
+    background: #1e90ff; /* Đổi màu footer sang xanh */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .header {
+        left: 0;
+    }
+
+    .main {
+        margin-left: 0;
+    }
 }
 
 /* Stats */

@@ -5,21 +5,48 @@
 }
 
 <!-- Stats -->
-<div class="stats">
-    <div class="stat-card">
-        <i class="fas fa-user-graduate"></i>
-        <h3>Học sinh</h3>
-        <div class="number"></div>
-    </div>
-    <div class="stat-card">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <h3>Giáo viên</h3>
-        <div class="number"></div>
-    </div>
-    <div class="stat-card">
-        <i class="fas fa-book"></i>
-        <h3>Lớp học</h3>
-        <div class="number"></div>
+
+<div class="container-fluid dashboard">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Học sinh</h3>
+                </div>
+                <div class="card-body">
+                    <a href="@Url.Action("StudentManagement", "Admin")" class="btn btn-primary btn-block">
+                        Quản lý Học sinh
+                    </a>
+                    <!-- Có thể thêm thống kê hoặc nội dung khác -->
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Giáo viên</h3>
+                </div>
+                <div class="card-body">
+                    <a href="@Url.Action("TeacherManagement", "Admin")" class="btn btn-success btn-block">
+                        Quản lý Giáo viên
+                    </a>
+                    <!-- Có thể thêm thống kê hoặc nội dung khác -->
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Lớp học</h3>
+                </div>
+                <div class="card-body">
+                    <a href="@Url.Action("Index", "Admin")" class=" btn btn-info btn-block">
+                        Quản lý Lớp học
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-

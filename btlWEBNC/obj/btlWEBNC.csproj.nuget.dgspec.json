@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\btlWEBNC.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\test\\webnc\\btlWEBNC\\btlWEBNC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\btlWEBNC.csproj": {
+    "C:\\Users\\Admin\\Desktop\\test\\webnc\\btlWEBNC\\btlWEBNC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\btlWEBNC.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\test\\webnc\\btlWEBNC\\btlWEBNC.csproj",
         "projectName": "btlWEBNC",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\btlWEBNC.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\test\\webnc\\btlWEBNC\\btlWEBNC.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\test\\webnc\\btlWEBNC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\Desktop\\webnc\\btlWEBNC\\NuGet.Config",
+          "C:\\Users\\Admin\\Desktop\\test\\webnc\\btlWEBNC\\NuGet.Config",
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
